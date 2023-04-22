@@ -20,10 +20,13 @@ console.log(avgVal([])); // null
 let avgVal = function(arr) {
   if (arr.length === 0) {
     return null;
+    let sum = 0;
+
+    arr.forEach((num) => sum += num)
   };
 
 
-    const sum = arr.reduce((acc, num) => acc + num )
+    //const sum = arr.reduce((acc, num) => acc + num )
     return sum / arr.length;
 
 

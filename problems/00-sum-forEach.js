@@ -11,9 +11,13 @@ console.log(sumForEach([6, 7, 2])); // 15
 console.log(sumForEach([])); // 0
 */
 
-let sumForEach = function(arr) {
-  return arr.reduce((acc, curr) => acc + curr, 0)
-};
+//let sumForEach = function(arr) {
+  //return arr.reduce((acc, curr) => acc + curr, 0)
+//};
+
+let sum = 0;
+Array.forEach((num) => sum += num);
+return sum;
 
 console.log(sumForEach([4, 3, -1, 10])); // 16
 console.log(sumForEach([6, 7, 2])); // 15

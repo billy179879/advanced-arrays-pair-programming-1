@@ -15,7 +15,10 @@ Examples:
 //filter using .endsWith
 
 let chooseyEndings = function(words, suffix) {
-
+  if (typeof words !==  'object') {
+    return [];
+  }
+return words.filter(word => word.endsWith(suffix))
 };
 
 console.log(chooseyEndings(['family', 'hound', 'catalyst', 'fly', 'timidly', 'bond'], 'ly'));
