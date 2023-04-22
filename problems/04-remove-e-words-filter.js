@@ -7,14 +7,24 @@ Solve this using Array's `filter()` method.
 
 Examples:
 
-console.log(removeEWords('What time is it everyone?')); // 'What is it'
-console.log(removeEWords('Enter the building')); // 'building'
+
 
 */
+//
+//split the sentence into array
+//make lower case
+//modify with filter
+//get rid of words with 'e'
+//return joined sentence
 
 let removeEWords = function(sentence) {
-    // Your code here
+  const words = sentence.split(' ');
+  const filteredWords = words.filter(word => !word.includes('e'));
+  return filteredWords.join(' ');
 };
+
+console.log(removeEWords('What time is it everyone?')); // 'What is it'
+console.log(removeEWords('Enter the building')); // 'building'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -22,4 +32,4 @@ try {
   module.exports = removeEWords;
 } catch (e) {
   module.exports = null;
-}
+}
